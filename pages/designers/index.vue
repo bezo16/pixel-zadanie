@@ -58,6 +58,7 @@ export default Vue.extend({
     display: flex
     flex-wrap: wrap
     justify-content: center
+    padding-bottom: 100px
 
   .card
     width: 450px
