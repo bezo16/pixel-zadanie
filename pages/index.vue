@@ -38,11 +38,6 @@
          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur</p>
        </div>
      </div>
-     <footer>
-       <p>all rights reserved 2013-2022. Pixelmate s.r.o</p>
-       <img src="" alt="pixelmate footer logo">
-       <p>zasady ochrany udajov</p>
-     </footer>
    </section>
 </template>
 
@@ -88,7 +83,7 @@ export default Vue.extend({
       padding: 30px 30px 45px 30px
       display: flex
       flex-direction: column
-      align-items: start
+      align-items: flex-start
 
     .form-subtitle
       margin-bottom: 20px

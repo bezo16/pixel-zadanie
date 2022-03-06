@@ -2,6 +2,7 @@
   <div class="default">
     <TheTopBar />
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
