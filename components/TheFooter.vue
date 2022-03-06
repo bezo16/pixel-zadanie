@@ -10,4 +10,7 @@
   footer
     display: flex
     justify-content: space-between
+    margin-top: 100px
+    background-color: yellowgreen
+    padding: 20px 0px
 </style>

@@ -99,7 +99,6 @@ export default Vue.extend({
       height: 25px
       border-radius: 50%
       border: 1.5px solid #0f33ff
-      cursor: pointer
       margin-right: 10px
 
     .form-rights
@@ -118,5 +117,4 @@ export default Vue.extend({
       border-bottom-right-radius: 30px
       font-weight: bold
       font-size: 1rem
-      cursor: pointer
 </style>
