@@ -6,7 +6,7 @@
         <h2 class="modal-subtitle">Prihlasit sa</h2>
         <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nesciunt natus beatae ducim</p>
         <form @submit.prevent="login" class="modal-form">
-          <input class="modal-input" type="text" placeholder="Váš email" required v-model="email">
+          <input class="modal-input" type="email" placeholder="Váš email" required v-model="email">
           <button class="modal-button">ODESLAT</button>
         </form>
       </div>
