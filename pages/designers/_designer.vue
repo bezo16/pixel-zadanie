@@ -131,4 +131,15 @@ export default Vue.extend({
   .moto-desc
     line-height: 1.5
 
+  @media (max-width: 1000px)
+    main
+      flex-direction: column
+      align-items: center
+    .developerimg
+      margin-bottom: 100px
+    .info
+      align-items: center
+      margin-left: 0px
+      padding-bottom: 40px
+
 </style>

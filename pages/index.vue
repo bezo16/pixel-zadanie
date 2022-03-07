@@ -30,8 +30,9 @@
          <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor cemix logo" class="sponsor">
        </div>
        <div class="lower-photodiv">
-        <p class="lowet-getknow">POZNEJTE PIXELMATE TEAM</p>
-        <h2 class="lower-title">Jsme mladi a hravi, startupy nas bavi</h2>
+         <img src="~/assets/img/laptop.png" alt="" class="laptop">
+         <p class="lowet-getknow">POZNEJTE PIXELMATE TEAM</p>
+         <h2 class="lower-title">Jsme mladi a hravi, startupy nas bavi</h2>
        </div>
        <div class="lower-div">
          <p class="lower-div__parag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur, iusto eius amet ipsa minima quibusdam, nemo nesciunt porro aperiam aliquid autem esse? Ipsa beatae exercitationem cupiditate.</p>
@@ -161,6 +162,11 @@ export default Vue.extend({
         margin: 0px auto
         padding: 0px 20px
 
+    .lower-photodiv
+      position: relative
+      max-width: 1320px
+      margin: 0px auto
+
     .sponsors
       display: flex
       justify-content: space-around
@@ -187,11 +193,14 @@ export default Vue.extend({
 
     .lower-div
       display: flex
+      justify-content: space-between
 
     .lower-div__parag
-      width: 50%
-      padding: 0px 30px
-      line-height: 1.5
+      width: 100%
+      max-width: 650px
+      padding-right: 45px
+
+      line-height: 1.66
 
     .lower-button
       background-color: $primary
@@ -211,6 +220,13 @@ export default Vue.extend({
     .lower-button:hover
       background-color: $secondary
       color: $primary
+
+    .laptop
+      position: absolute
+      width: 590px
+      right: 5%
+      top: -75%
+      z-index: -2
 
     @media (max-width: 1000px)
       .sponsor

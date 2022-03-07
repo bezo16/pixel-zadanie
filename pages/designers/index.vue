@@ -99,7 +99,7 @@ export default Vue.extend({
     flex-wrap: wrap
     justify-content: center
     align-items: flex-start
-    margin-top: 100px
+    margin-top: 10px
     padding-bottom: 100px
 
   .card
