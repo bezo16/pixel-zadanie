@@ -73,7 +73,7 @@ export default Vue.extend({
     top: 0px
     left: 0px
     width: 100%
-    padding: 0px 50px
+    padding: 0px 20px
 
   .topbar-wrp
     width: 90%

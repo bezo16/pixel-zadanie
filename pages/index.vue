@@ -31,12 +31,15 @@
        </div>
        <div class="lower-photodiv">
         <p class="lowet-getknow">POZNEJTE PIXELMATE TEAM</p>
-        <h2>Jsme mladi a hravi, startupy nas bavi</h2>
+        <h2 class="lower-title">Jsme mladi a hravi, startupy nas bavi</h2>
        </div>
        <div class="lower-div">
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur, iusto eius amet ipsa minima quibusdam, nemo nesciunt porro aperiam aliquid autem esse? Ipsa beatae exercitationem cupiditate.</p>
-         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur</p>
+         <p class="lower-div__parag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur, iusto eius amet ipsa minima quibusdam, nemo nesciunt porro aperiam aliquid autem esse? Ipsa beatae exercitationem cupiditate.</p>
+         <p class="lower-div__parag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur</p>
        </div>
+       <NuxtLink to="/designers">
+         <button class="lower-button">CO DALSIHO SE SUSKA --></button>
+       </NuxtLink>
      </div>
    </section>
 </template>
@@ -156,6 +159,7 @@ export default Vue.extend({
     .lower
         max-width: 1640px
         margin: 0px auto
+        padding: 0px 20px
 
     .sponsors
       display: flex
@@ -164,7 +168,7 @@ export default Vue.extend({
       background: white
       padding: 20px 0px
       box-shadow: 1px 1px 16px 3px rgba(0,0,0,0.15)
-      margin-bottom: 200px
+      margin-bottom: 150px
 
     .sponsor
         width: 170px
@@ -172,6 +176,44 @@ export default Vue.extend({
 
     .lowet-getknow
       color: $primary
-      margin-bottom: 30px
+      margin-bottom: 20px
       font-weight: bold
+
+    .lower-title
+      font-size: 3rem
+      max-width: 500px
+      line-height: 1.33
+      margin-bottom: 60px
+
+    .lower-div
+      display: flex
+
+    .lower-div__parag
+      width: 50%
+      padding: 0px 30px
+      line-height: 1.5
+
+    .lower-button
+      background-color: $primary
+      border-top-right-radius: 30px
+      border-bottom-right-radius: 30px
+      border-top-left-radius: 30px
+      display: block
+      margin: 0px auto
+      margin-top: 50px
+      margin-bottom: 100px
+      width: 250px
+      padding: 20px 0px
+      font-weight: bold
+      color: $secondary
+      border: 2px solid $primary
+
+    .lower-button:hover
+      background-color: $secondary
+      color: $primary
+
+    @media (max-width: 1000px)
+      .sponsor
+        width: 90px
+
 </style>
