@@ -54,6 +54,7 @@ export default Vue.extend({
 
   .cards
     max-width: 1500px
+    min-height: 70vh
     margin: 0 auto
     display: flex
     flex-wrap: wrap
