@@ -2,10 +2,10 @@
   <section class="designers">
     <div class="search">
       <div class="searchdiv">
-        <img src="" alt="search glass">
-        <input type="text">
-        <button>VYHLEDAT</button>
+        <!-- <img src="" alt="search glass">  -->
+        <input class="search-input" placeholder="Vyhladavanie" type="text" v-model="searchQuery" @input="filterDesigners">
       </div>
+        <button class="search-button">VYHLEDAT</button>
     </div>
     <section class="cards">
       <div v-for="(designer,index) in designers" :key="`designer${index}`" class="card">
@@ -33,11 +33,19 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
+      allDesigners: [] as Array<any>,
       designers: [] as Array<any>,
+      searchQuery: '' as string,
     }
   },
+  methods: {
+     filterDesigners() {
+       this.designers = this.allDesigners.filter(designer => designer.name.toLowerCase().includes(this.searchQuery.toLowerCase()))
+     }
+  },
   async mounted() {
-    this.designers = await this.$axios.$get('https://jsonplaceholder.typicode.com/users')
+    this.allDesigners = await this.$axios.$get('https://jsonplaceholder.typicode.com/users')
+    this.designers = this.allDesigners
   }
 })
 </script>
@@ -45,15 +53,44 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
   .designers
-    margin-top: 200px
+    margin-top: 300px
     background-color: #ecefff
 
   .search
-    max-width: 1000px
+    max-width: 750px
+    background-color: white
+    padding: 22px
+    height: 100px
+    position: relative
+    transform: translateY(-50%)
     margin: 0px auto
+    box-shadow: 1px 1px 16px 3px rgba(0,0,0,0.15)
+    display: flex
+
+  .searchdiv
+    height: 100%
+    width: 80%
+
+  .search-input
+    display: block
+    width: 100%
+    height: 100%
+    padding-left: 50px
+    font-size: 1.25rem
+    border: $secondary 2px solid
+    color: $grey
+    font-weight: bold
+
+  .search-button
+    border-top-right-radius: 30px
+    border-bottom-right-radius: 30px
+    border-top-left-radius: 30px
+    background-color: $primary
+    width: 180px
+    font-weight: bold
 
   .cards
-    max-width: 1500px
+    max-width: 1100px
     min-height: 70vh
     margin: 0 auto
     display: flex
@@ -65,7 +102,7 @@ export default Vue.extend({
   .card
     width: 330px
     margin: 15px
-    padding: 25px 25px 50px 25px
+    padding: 25px 25px 40px 25px
     border-radius: 25px
     background: white
     display: flex
