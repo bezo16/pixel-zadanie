@@ -41,7 +41,7 @@
             <button @click="toggleMobileMenu" class="mobilenav-link">Designeri</button>
           </NuxtLink>
           <button @click="toggleMobileMenu" class="mobilenav-link">Portfolio</button>
-          <button @click="toggleMobileMenu" class="mobilenav-link">Prihlasit sa</button>
+          <button @click="toggleMobileMenu" class="mobilenav-link" @click.self="toggleLogin">Prihlasit sa</button>
         </nav>
       </div>
     </transition>
