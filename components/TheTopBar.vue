@@ -14,8 +14,8 @@
       </div>
     </transition>
     <div class="topbar-wrp">
-      <img v-if="isHomepage" class="logo" src="~/assets/img/whitelogo.svg" alt="pixelmate brand logo">
-      <img v-else class="logo" src="~/assets/img/blacklogo.svg" alt="pixelmate brand logo">
+      <img v-if="isHomepage" class="logo" src="~/assets/img/whitelogo.svg" alt="">
+      <img v-else class="logo" src="~/assets/img/blacklogo.svg" alt="">
         <ul class="list">
           <li>
             <NuxtLink to="/designers">
@@ -196,6 +196,10 @@ export default Vue.extend({
     border-bottom-right-radius: 30px
     border-top-left-radius: 30px
     font-size: 0.75rem
+
+  @media (max-width: 1000px)
+    .list
+      display: none
 
 
 </style>

@@ -23,11 +23,11 @@
      </div>
      <div class="lower">
        <div class="sponsors">
-         <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor ceska televize logo" class="sponsor">
-         <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor deliotte logo" class="sponsor">
-         <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor bosch logo" class="sponsor">
-         <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor narodni muzeum logo" class="sponsor">
-         <img src="~/assets/img/ceskatelevize.jpg" alt="sponzor cemix logo" class="sponsor">
+         <img src="~/assets/img/ceskatelevize.jpg" alt="" class="sponsor">
+         <img src="~/assets/img/ceskatelevize.jpg" alt="" class="sponsor">
+         <img src="~/assets/img/ceskatelevize.jpg" alt="" class="sponsor">
+         <img src="~/assets/img/ceskatelevize.jpg" alt="" class="sponsor">
+         <img src="~/assets/img/ceskatelevize.jpg" alt="" class="sponsor">
        </div>
        <div class="lower-photodiv">
          <img src="~/assets/img/laptop.png" alt="" class="laptop">

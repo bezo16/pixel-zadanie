@@ -19,7 +19,7 @@
         </div>
       </section>
       <section class="photo">
-        <img class="developerimg" src="~/assets/img/developer.png" alt="programmer">
+        <img class="developerimg" src="~/assets/img/developer.png" alt="">
       </section>
     </main>
   </section>
