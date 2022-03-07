@@ -58,6 +58,7 @@ export default Vue.extend({
 
   .search
     max-width: 750px
+    width: 90%
     background-color: white
     padding: 22px
     height: 100px
@@ -66,6 +67,7 @@ export default Vue.extend({
     margin: 0px auto
     box-shadow: 1px 1px 16px 3px rgba(0,0,0,0.15)
     display: flex
+    z-index: 0
 
   .searchdiv
     height: 100%
@@ -76,7 +78,7 @@ export default Vue.extend({
     width: 100%
     height: 100%
     padding-left: 50px
-    font-size: 1.25rem
+    font-size: 1.2rem
     border: $secondary 2px solid
     color: $grey
     font-weight: bold
@@ -90,17 +92,18 @@ export default Vue.extend({
     font-weight: bold
 
   .cards
-    max-width: 1100px
+    max-width: 1200px
     min-height: 70vh
     margin: 0 auto
     display: flex
     flex-wrap: wrap
     justify-content: center
+    align-items: flex-start
     margin-top: 100px
     padding-bottom: 100px
 
   .card
-    width: 330px
+    width: 340px
     margin: 15px
     padding: 25px 25px 40px 25px
     border-radius: 25px
@@ -127,6 +130,7 @@ export default Vue.extend({
 
   .card-name
     margin-bottom: 15px
+    font-size: 1.33rem
 
   .card-email
     color: $grey
