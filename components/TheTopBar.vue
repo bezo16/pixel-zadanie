@@ -26,7 +26,7 @@
             <button class="nav-button" :class="{greybtn:!isHomepage}">Portfolio</button>
           </li>
           <li>
-            <button class="nav-button" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
+            <button class="nav-button primarybtn" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
           </li>
         </ul>
     </div>
@@ -92,7 +92,17 @@ export default Vue.extend({
 
   .nav-button
     font-weight: bold
-    padding: 10px 30px
+    padding: 10px 32px
+
+  .primarybtn
+    border: 1.5px solid $secondary
+    border-top-right-radius: 30px
+    border-bottom-right-radius: 30px
+    border-top-left-radius: 30px
+
+  .primarybtn:hover
+    background: $secondary
+    color: $primary
 
   .greybtn
     color: #8E929F
