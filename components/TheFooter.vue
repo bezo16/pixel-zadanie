@@ -1,7 +1,7 @@
 <template>
   <footer>
        <p>all rights reserved 2013- Pixelmate s.r.o</p>
-       <img src="~/assets/img/logo.svg" alt="pixelmate footer logo">
+       <img src="~/assets/img/whitelogo.svg" alt="pixelmate footer logo">
        <p class="right">zasady ochrany udajov</p>
   </footer>
 </template>

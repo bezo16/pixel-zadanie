@@ -1,18 +1,21 @@
 <template>
   <section class="topbar">
-    <div class="modal" v-if="showLogin" @click.self="toggleLogin" >
-      <div class="modal-wrapper">
-        <div @click.self="toggleLogin" class="modal-close">x</div>
-        <h2 class="modal-subtitle">Prihlasit sa</h2>
-        <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nesciunt natus beatae ducim</p>
-        <form @submit.prevent="login" class="modal-form">
-          <input class="modal-input" type="email" placeholder="Váš email" required v-model="email">
-          <button class="modal-button">ODESLAT</button>
-        </form>
+    <transition name="fade">
+      <div class="modal" v-if="showLogin" @click.self="toggleLogin" >
+        <div class="modal-wrapper">
+          <div @click.self="toggleLogin" class="modal-close">x</div>
+          <h2 class="modal-subtitle">Prihlasit sa</h2>
+          <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nesciunt natus beatae ducim</p>
+          <form @submit.prevent="login" class="modal-form">
+            <input class="modal-input" type="email" placeholder="Váš email" required v-model="email">
+            <button class="modal-button">ODESLAT</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </transition>
     <div class="topbar-wrp">
-      <img class="logo" src="~/assets/img/logo.svg" alt="pixelmate brand logo">
+      <img v-if="isHomepage" class="logo" src="~/assets/img/whitelogo.svg" alt="pixelmate brand logo">
+      <img v-else class="logo" src="~/assets/img/blacklogo.svg" alt="pixelmate brand logo">
         <ul class="list">
           <li>
             <NuxtLink to="/designers">

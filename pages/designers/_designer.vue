@@ -43,6 +43,7 @@ export default Vue.extend({
 <style lang="sass" scoped>
   .designer
     padding-top: 200px
+    min-height: 100vh
 
   .backbtn
     color: $primary
