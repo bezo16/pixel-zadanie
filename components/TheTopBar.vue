@@ -1,5 +1,6 @@
 <template>
   <section class="topbar">
+
     <transition name="fade">
       <div class="modal" v-if="showLogin" @click.self="toggleLogin" >
         <div class="modal-wrapper">
@@ -13,23 +14,38 @@
         </div>
       </div>
     </transition>
+
     <div class="topbar-wrp">
       <img v-if="isHomepage" class="logo" src="~/assets/img/whitelogo.svg" alt="">
       <img v-else class="logo" src="~/assets/img/blacklogo.svg" alt="">
-        <ul class="list">
-          <li>
-            <NuxtLink to="/designers">
-              <button class="nav-button" :class="{greybtn:!isHomepage}">Designeri</button>
-            </NuxtLink>
-          </li>
-          <li>
-            <button class="nav-button" :class="{greybtn:!isHomepage}">Portfolio</button>
-          </li>
-          <li>
-            <button class="nav-button primarybtn" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
-          </li>
-        </ul>
+      <img class="hamburger" src="~/assets/img/whitehamburger.svg" @click.self="toggleMobileMenu" alt="hambuger menu icon, used for opening navbars on mobile phones">
+      <ul class="list">
+        <li>
+          <NuxtLink to="/designers">
+            <button class="nav-button" :class="{greybtn:!isHomepage}">Designeri</button>
+          </NuxtLink>
+        </li>
+        <li>
+          <button class="nav-button" :class="{greybtn:!isHomepage}">Portfolio</button>
+        </li>
+        <li>
+          <button class="nav-button primarybtn" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
+        </li>
+      </ul>
     </div>
+
+    <transition name="mobilenav">
+      <div class="mobilenav" v-if="showMobileNav">
+        <nav>
+          <NuxtLink to="/designers">
+            <button @click="toggleMobileMenu" class="mobilenav-link">Designeri</button>
+          </NuxtLink>
+          <button @click="toggleMobileMenu" class="mobilenav-link">Portfolio</button>
+          <button @click="toggleMobileMenu" class="mobilenav-link">Prihlasit sa</button>
+        </nav>
+      </div>
+    </transition>
+
   </section>
 </template>
 
@@ -39,6 +55,7 @@ export default Vue.extend({
   data() {
     return {
       showLogin: false as boolean,
+      showMobileNav: false as boolean,
       email: '' as string,
     }
   },
@@ -52,9 +69,11 @@ export default Vue.extend({
       this.showLogin = !this.showLogin
     },
     login() {
-      console.log(this.email)
       this.email = ''
       this.toggleLogin()
+    },
+    toggleMobileMenu() {
+      this.showMobileNav = !this.showMobileNav
     }
   },
   mounted() : void {
@@ -68,9 +87,9 @@ export default Vue.extend({
 
 <style scoped lang="sass">
   .topbar
-    height: 10rem
+    height: 70px
     display: flex
-    align-items: center
+    align-items: flex-end
     justify-content: center
     position: fixed
     top: 0px
@@ -89,6 +108,12 @@ export default Vue.extend({
   .list
     margin-left: auto
     display: flex
+
+  .hamburger
+    display: none
+    margin-left: auto
+    margin-right: 10px
+    cursor: pointer
 
   .nav-button
     font-weight: bold
@@ -197,9 +222,36 @@ export default Vue.extend({
     border-top-left-radius: 30px
     font-size: 0.75rem
 
+  .mobilenav
+    position: absolute
+    left: 0px
+    top: calc(100% + 15px)
+    width: 100%
+    height: 150px
+    background-color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 1px 1px 16px 4px rgba(0,0,0,0.15)
+
+  .mobilenav-link
+    color: $grey
+    border: 1.5px solid $primary
+    padding: 10px 25px
+    border-radius: 50px
+    font-weight: bold
+
+  .mobilenav-link:hover
+    color: $secondary
+    background-color: $primary
+
+
+
   @media (max-width: 1000px)
     .list
       display: none
+    .hamburger
+      display: initial
 
 
 </style>
