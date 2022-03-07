@@ -16,9 +16,14 @@
     </transition>
 
     <div class="topbar-wrp">
-      <img v-if="isHomepage" class="logo" src="~/assets/img/whitelogo.svg" alt="">
-      <img v-else class="logo" src="~/assets/img/blacklogo.svg" alt="">
-      <img class="hamburger" src="~/assets/img/whitehamburger.svg" @click.self="toggleMobileMenu" alt="hambuger menu icon, used for opening navbars on mobile phones">
+      <NuxtLink v-if="isHomepage" to="/">
+        <img  class="logo" src="~/assets/img/whitelogo.svg" alt="">
+      </NuxtLink>
+      <NuxtLink v-else to="/">
+        <img  class="logo" src="~/assets/img/blacklogo.svg" alt="">
+      </NuxtLink>
+      <img v-if="isHomepage" class="hamburger" src="~/assets/img/whitehamburger.svg" @click.self="toggleMobileMenu" alt="hambuger menu icon, used for opening navbars on mobile phones">
+      <img v-else class="hamburger" src="~/assets/img/blackhamburger.svg" @click.self="toggleMobileMenu" alt="hambuger menu icon, used for opening navbars on mobile phones">
       <ul class="list">
         <li>
           <NuxtLink to="/designers">

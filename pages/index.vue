@@ -17,7 +17,7 @@
              <span class="input-checkbox"></span>
              <p class="form-rights">súhlasím so správou spracovaním a uchovaním mojich osobných údajov</p>
            </div>
-           <button class="form-button">PRIHLASIT SA -></button>
+           <button class="form-button">PRIHLASIT SA --></button>
          </form>
        </main>
      </div>
@@ -55,10 +55,11 @@ export default Vue.extend({
       email: '' as string,
       password: '' as string,
       isAccepted: false as boolean,
+      hasAccepted: false as boolean,
     }
   },
   methods: {
-    log() {
+    log() : void {
       console.log(this.email,this.password)
       this.email = ''
       this.password = ''
@@ -69,9 +70,9 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
     .bgimg
-      background: url(https://placekitten.com/1700/900) , linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9))
+      background: url(~/assets/img/background.png) , linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9))
       height: 100vh
-      background-size: 100% 100%
+      background-size: cover
 
     main
       width: 100%
