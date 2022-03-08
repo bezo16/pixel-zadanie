@@ -119,14 +119,15 @@ export default Vue.extend({
 
 
     form
-      width: 30%
-      max-width: 440px
+      width: 100%
+      max-width: 420px
       background: white
       border-radius: 5px
       padding: 30px 30px 45px 30px
       display: flex
       flex-direction: column
       align-items: flex-start
+      margin: 0px 15px
 
     .form-subtitle
       margin-bottom: 25px
@@ -214,7 +215,6 @@ export default Vue.extend({
       width: 100%
       max-width: 650px
       padding-right: 45px
-
       line-height: 1.66
 
     .lower-button
@@ -246,5 +246,69 @@ export default Vue.extend({
     @media (max-width: 1000px)
       .sponsor
         width: 90px
+      .info-title
+        font-size: 2.25rem
+        max-width: 400px
+      .info-desc
+        font-size: 0.75rem
+        max-width: 300px
+      .laptop
+        width: 390px
+        top: 25%
+
+
+
+
+    @media (max-width: 600px)
+      main
+        flex-direction: column
+        padding-top: 120px
+        display: flex
+      .info-title
+        font-size: 1.75rem
+        max-width: 600px
+        text-align: center
+      .info-desc
+        font-size: 0.66rem
+        max-width: 600px
+        text-align: center
+      .info
+        width: 100%
+      .info-contact
+        width: 170px
+        padding: 13px 0px
+        font-weight: bold
+        font-size: 0.8rem
+        margin: 0px auto
+        display: block
+        margin-bottom: 55px
+      form
+        padding: 20px 20px 35px 20px
+        margin: 0px
+        max-width: 600px
+      .form-subtitle
+        margin-bottom: 15px
+        font-weight: 900
+      .sponsors
+        max-width: 600px
+        justify-content: center
+      .sponsor
+        width: 40px
+        flex: 1
+      .lower-div
+        align-items: center
+        flex-direction: column
+      .lower-div__parag
+        padding-right: 0px
+        line-height: 1.66
+        margin-bottom: 40px
+      .laptop
+        width: 350px
+        top: 10%
+        right: -20%
+      .lower-title
+        font-size: 2rem
+        margin-bottom: 80px
+
 
 </style>
