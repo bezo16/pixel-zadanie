@@ -204,6 +204,9 @@ export default Vue.extend({
     .lower-div
       display: flex
       justify-content: space-between
+      max-width: 1320px
+      padding: 0px 10px
+      margin: 0px auto
 
     .lower-div__parag
       width: 100%
