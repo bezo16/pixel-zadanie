@@ -27,4 +27,9 @@
     footer
       padding: 0px 10px
 
+  @media (max-width: 1000px)
+    p
+      display: none
+    footer
+      justify-content: center
 </style>

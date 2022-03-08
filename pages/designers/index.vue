@@ -5,7 +5,7 @@
         <!-- <img src="" alt="search glass">  -->
         <input class="search-input" placeholder="Vyhladavanie" type="text" v-model="searchQuery" @input="filterDesigners">
       </div>
-        <button class="search-button">VYHLEDAT</button>
+        <button class="search-button btncurve">VYHLEDAT</button>
     </div>
     <section class="cards">
       <div v-for="(designer,index) in designers" :key="`designer${index}`" class="card">
@@ -20,7 +20,7 @@
         </div>
         <a class="card-website" :href="designer.website">{{ designer.website }}</a>
         <NuxtLink :to="`/designers/${index + 1}`">
-          <button class="card-button">ZOBRAZIT PROFIL --></button>
+          <button class="card-button btncurve">ZOBRAZIT PROFIL --></button>
         </NuxtLink>
       </div>
     </section>
@@ -84,9 +84,6 @@ export default Vue.extend({
     font-weight: bold
 
   .search-button
-    border-top-right-radius: 30px
-    border-bottom-right-radius: 30px
-    border-top-left-radius: 30px
     background-color: $primary
     width: 180px
     font-weight: bold
@@ -114,9 +111,6 @@ export default Vue.extend({
   .card-button
     color: $primary
     border: $primary 1.5px solid
-    border-top-right-radius: 30px
-    border-bottom-right-radius: 30px
-    border-top-left-radius: 30px
     width: 250px
     padding: 15px 20px
     font-weight: bold

@@ -6,7 +6,7 @@
            <div class="info-wrapper">
              <h1 class="info-title">Specializujeme se na vyvoj produktu</h1>
              <p class="info-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem excepturi sunt sequi quia tempora consequuntur sit quis natus odit dolorum?</p>
-             <button class="info-contact">KONTAKTUJE NAS --></button>
+             <button class="info-contact btncurve">KONTAKTUJE NAS --></button>
            </div>
          </div>
          <form @submit.prevent="log">
@@ -19,7 +19,7 @@
              </div>
              <p class="form-rights">súhlasím so správou spracovaním a uchovaním mojich osobných údajov</p>
            </div>
-           <button class="form-button">PRIHLASIT SA --></button>
+           <button class="form-button btncurve">PRIHLASIT SA --></button>
          </form>
        </main>
      </div>
@@ -41,7 +41,7 @@
          <p class="lower-div__parag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis quos! Eos aut rem maxime necessitatibus asperiores hic fugiat aliquid! Doloribus quae temporibus illo. At reiciendis, dignissimos dolorem perspiciatis nisi veniam ipsam consequatur</p>
        </div>
        <NuxtLink to="/designers">
-         <button class="lower-button">CO DALSIHO SE SUSKA --></button>
+         <button class="lower-button btncurve">CO DALSIHO SE SUSKA --></button>
        </NuxtLink>
      </div>
    </section>
@@ -108,9 +108,6 @@ export default Vue.extend({
       margin-bottom: 35px
 
     .info-contact
-      border-top-right-radius: 30px
-      border-bottom-right-radius: 30px
-      border-top-left-radius: 30px
       background-color: $primary
       color: $secondary
       width: 240px
@@ -167,9 +164,6 @@ export default Vue.extend({
       background: #0f33ff
       width: 100%
       padding: 20px 0px
-      border-top-left-radius: 30px
-      border-top-right-radius: 30px
-      border-bottom-right-radius: 30px
       font-weight: bold
       font-size: 1rem
 
@@ -219,9 +213,6 @@ export default Vue.extend({
 
     .lower-button
       background-color: $primary
-      border-top-right-radius: 30px
-      border-bottom-right-radius: 30px
-      border-top-left-radius: 30px
       display: block
       margin: 0px auto
       margin-top: 50px

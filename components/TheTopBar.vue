@@ -9,7 +9,7 @@
           <p class="modal-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nesciunt natus beatae ducim</p>
           <form @submit.prevent="login" class="modal-form">
             <input class="modal-input" type="email" placeholder="Váš email" required v-model="email">
-            <button class="modal-button">ODESLAT</button>
+            <button class="modal-button btncurve">ODESLAT</button>
           </form>
         </div>
       </div>
@@ -34,7 +34,7 @@
           <button class="nav-button" :class="{greybtn:!isHomepage}">Portfolio</button>
         </li>
         <li>
-          <button class="nav-button primarybtn" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
+          <button class="nav-button primarybtn btncurve" :class="{'greybtn-primary':!isHomepage}" @click.self="toggleLogin">Prihlasit sa</button>
         </li>
       </ul>
     </div>
@@ -126,9 +126,6 @@ export default Vue.extend({
 
   .primarybtn
     border: 1.5px solid $secondary
-    border-top-right-radius: 30px
-    border-bottom-right-radius: 30px
-    border-top-left-radius: 30px
 
   .primarybtn:hover
     background: $secondary
@@ -141,9 +138,6 @@ export default Vue.extend({
     width: 180px
     color: #8E929F
     border: #8E929F 2px solid
-    border-top-right-radius: 30px
-    border-bottom-right-radius: 30px
-    border-top-left-radius: 30px
     margin-left: 30px
 
   .greybtn-primary:hover
@@ -222,9 +216,6 @@ export default Vue.extend({
     margin-top: 25px
     width: 150px
     padding: 15px 15px
-    border-top-right-radius: 30px
-    border-bottom-right-radius: 30px
-    border-top-left-radius: 30px
     font-size: 0.75rem
 
   .mobilenav
@@ -257,6 +248,13 @@ export default Vue.extend({
       display: none
     .hamburger
       display: initial
+
+  @media (max-width: 600px)
+    .mobilenav
+      height: 150px
+      flex-direction: column
+      justify-content: center
+      align-items: center
 
 
 </style>
