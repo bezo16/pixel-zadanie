@@ -14,7 +14,9 @@
            <input required class="form-input" type="email" placeholder="Váš email" v-model="email">
            <input required class="form-input" type="password" placeholder="Heslo" v-model="password">
            <div class="flex">
-             <span class="input-checkbox"></span>
+             <div class="input-checkbox" @click.stop="hasAccepted = !hasAccepted">
+               <span :class="{hide:!hasAccepted}" class="input-checkbox__accepted"></span>
+             </div>
              <p class="form-rights">súhlasím so správou spracovaním a uchovaním mojich osobných údajov</p>
            </div>
            <button class="form-button">PRIHLASIT SA --></button>
@@ -60,9 +62,12 @@ export default Vue.extend({
   },
   methods: {
     log() : void {
-      console.log(this.email,this.password)
-      this.email = ''
-      this.password = ''
+      if(this.hasAccepted) {
+        console.log(this.email,this.password)
+        this.email = ''
+        this.password = ''
+        this.hasAccepted = false
+      }
     }
   }
 })
@@ -139,6 +144,15 @@ export default Vue.extend({
       border: 1.5px solid #0f33ff
       margin-right: 10px
       cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .input-checkbox__accepted
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background-color: $primary
 
     .form-rights
       color: grey
