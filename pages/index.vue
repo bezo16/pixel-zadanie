@@ -277,12 +277,24 @@ export default Vue.extend({
         display: block
         margin-bottom: 55px
       form
-        padding: 20px 20px 35px 20px
+        padding: 10px
         margin: 0px
         max-width: 600px
       .form-subtitle
         margin-bottom: 15px
         font-weight: 900
+        font-size: 1rem
+      .form-input
+        width: 100%
+        margin-bottom: 20px
+        padding: 10px
+        margin-bottom: 10px
+      .form-button
+        margin-top: 15px
+        margin-left: 0px
+        font-size: 0.66rem
+        padding: 10px 0px
+        font-size: 1rem
       .sponsors
         max-width: 600px
         justify-content: center
